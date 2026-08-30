@@ -8,11 +8,13 @@
     "start": "vite --open",
     "build": "vite build",
     "preview": "vite preview",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "deploy": "npm run build && gh-pages -d dist"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
     "eslint": "^10.9.1",
+    "gh-pages": "^6.3.0",
     "globals": "^17.11.0",
     "prettier": "^3.9.6",
     "vite": "^8.2.2"
