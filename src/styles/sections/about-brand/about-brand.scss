@@ -1,0 +1,91 @@
+.about-brand {
+  @extend %container;
+  @extend .grid;
+
+  &__title-decoration {
+    display: none;
+
+    @extend .grid__item--desktop-1-1;
+
+    @include on-desktop {
+      display: block;
+    }
+  }
+
+  &__main {
+    @extend .grid__item--tablet-1-3;
+    @extend .grid__item--desktop-2-5;
+  }
+
+  &__title {
+    @extend %section-title;
+
+    margin-bottom: 10px;
+
+    @include on-desktop {
+      margin-bottom: 34px;
+    }
+
+    @include on-large-screen {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__description {
+    @extend %paragraph-text;
+
+    margin-bottom: 30px;
+  }
+
+  &__description-addition {
+    display: none;
+    @extend %paragraph-text;
+
+    @include on-desktop {
+      display: block;
+
+      margin-bottom: 40px;
+    }
+  }
+
+  &__photo {
+    display: none;
+
+    object-fit: cover;
+    object-position: center;
+
+    @include on-tablet {
+      display: block;
+    }
+
+    &--main {
+      @extend .grid__item--tablet-4-6;
+      @extend .grid__item--desktop-7-11;
+
+      @include on-tablet {
+        width: calc(100% + #{$container-padding-tablet});
+        height: 318px;
+      }
+
+      @include on-desktop {
+        width: 100%;
+        height: 529px;
+      }
+    }
+
+    &--secondary {
+      @extend .grid__item--desktop-12-12;
+
+      @include on-desktop {
+        align-self: end;
+
+        width: calc(100% + #{$container-padding-desktop});
+        height: 430px;
+      }
+
+      @include on-large-screen {
+        width: calc(100% + #{$container-padding-large});
+      }
+    }
+  }
+}

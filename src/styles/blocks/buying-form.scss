@@ -1,0 +1,22 @@
+.buying-form {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+
+  &__input-field {
+    @extend %form-field-base;
+
+    padding-bottom: 5px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 150%;
+    color: $color-accent;
+
+    &::placeholder {
+      font-family: inherit;
+      text-transform: capitalize;
+
+      color: #828282;
+    }
+  }
+}

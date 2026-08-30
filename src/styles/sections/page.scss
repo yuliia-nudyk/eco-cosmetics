@@ -1,0 +1,65 @@
+.page {
+  scroll-behavior: smooth;
+
+  position: relative;
+
+  [id] {
+    scroll-margin-top: 40px;
+
+    @include on-tablet {
+      scroll-margin-top: 60px;
+    }
+
+    @include on-desktop {
+      scroll-margin-top: 80px;
+    }
+  }
+
+  &__body {
+    background-color: $color-bg;
+
+    font-family: $main-font-family;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+
+    color: $color-primary;
+
+    @extend %section-flex-gap;
+
+    &--with-menu {
+      overflow-y: hidden;
+    }
+  }
+
+  &__menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    transform: translateY(-100%);
+    transition: transform 0.3s;
+
+    z-index: 1000;
+
+    &:target {
+      transform: translateY(0);
+    }
+  }
+
+  &__shop {
+    overflow-x: hidden;
+
+    &--with-menu {
+      height: 100vh;
+      overflow-y: hidden;
+    }
+  }
+
+  &__ayurvedic-tooth-powder {
+    width: 100%;
+    overflow: hidden;
+  }
+}

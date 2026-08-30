@@ -1,0 +1,43 @@
+.product-card {
+  color: $color-primary;
+
+  &__photo {
+    @include photo(calc(100% + #{$container-padding-mobile * 2}), 267px);
+
+    margin-left: #{-$container-padding-mobile};
+    margin-bottom: 20px;
+
+    @include on-tablet {
+      width: 100%;
+      min-width: 335px;
+      height: 300px;
+
+      margin-left: 0;
+    }
+
+    @include on-desktop {
+      height: 500px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 10px;
+
+    @include on-tablet {
+      margin-bottom: 15px;
+    }
+
+    @include on-desktop {
+      margin-bottom: 13px;
+    }
+  }
+
+  &__price {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 150%;
+
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+}

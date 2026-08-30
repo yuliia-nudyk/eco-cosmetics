@@ -1,0 +1,49 @@
+.shipping {
+  background-color: $color-bg;
+
+  &__content {
+    @extend %container;
+    @extend .grid;
+  }
+
+  &__top-actions {
+    @extend .grid__item--tablet-1-6;
+    @extend .grid__item--desktop-1-12;
+
+    margin-bottom: 30px;
+
+    @include on-tablet {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__buying-form {
+    @extend .grid__item--tablet-2-5;
+    @extend .grid__item--desktop-3-10;
+
+    margin-bottom: 40px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @include on-tablet {
+      width: 280px;
+
+      justify-self: center;
+      margin-bottom: 50px;
+    }
+
+    @include on-desktop {
+      width: 400px;
+    }
+  }
+
+  &__next-button {
+    align-self: center;
+
+    @include on-tablet {
+      margin-bottom: 390px;
+    }
+  }
+}

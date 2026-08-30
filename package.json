@@ -1,0 +1,23 @@
+{
+  "name": "eco-cosmetics",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --open",
+    "start": "vite --open",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint ."
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.9.1",
+    "globals": "^17.11.0",
+    "prettier": "^3.9.6",
+    "vite": "^8.2.2"
+  },
+  "dependencies": {
+    "sass": "^1.103.1"
+  }
+}

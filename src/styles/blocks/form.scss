@@ -1,0 +1,66 @@
+.form {
+  &__main {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+
+    margin-bottom: 45px;
+
+    @include on-desktop {
+      margin-bottom: 60px;
+    }
+  }
+
+  &__field {
+    @extend %form-field-base;
+    @extend %small-text;
+
+    padding-bottom: 10px;
+    text-transform: capitalize;
+    color: $color-accent;
+
+    transition: all 0.3s;
+
+    @include on-tablet {
+      font-weight: 500;
+    }
+
+    @include on-desktop {
+      font-size: 18px;
+    }
+
+    &::placeholder {
+      font-family: $main-font-family;
+      @extend %small-text;
+
+      text-transform: capitalize;
+      color: #828282;
+
+      @include on-tablet {
+        font-weight: 500;
+      }
+
+      @include on-desktop {
+        font-size: 18px;
+      }
+    }
+
+    &--message {
+      margin-bottom: 30px;
+
+      @include on-desktop {
+        margin-bottom: 50px;
+      }
+    }
+  }
+
+  &__button {
+    margin: 0 auto;
+
+    cursor: pointer;
+
+    @include on-tablet {
+      margin: 0;
+    }
+  }
+}

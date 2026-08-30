@@ -1,0 +1,46 @@
+.nav-list {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+
+  @include on-tablet {
+    gap: 15px;
+  }
+
+  @include on-desktop {
+    flex-direction: row;
+    gap: 40px;
+  }
+
+  &__link {
+    display: inline-block;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 150%;
+    text-transform: capitalize;
+
+    position: relative;
+
+    &--white {
+      color: $color-bg;
+      @include link-hover($color-bg);
+      @include active(transform, scale(1.2));
+    }
+
+    &--olive {
+      color: $color-accent;
+      @include link-hover($color-accent);
+      @include active(transform, scale(1.1));
+    }
+
+    @include on-tablet {
+      font-weight: 400;
+      font-size: 14px;
+    }
+
+    @include on-desktop {
+      font-weight: 500;
+      font-size: 18px;
+    }
+  }
+}

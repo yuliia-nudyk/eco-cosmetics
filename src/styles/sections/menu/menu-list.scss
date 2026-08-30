@@ -1,0 +1,25 @@
+.menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+
+  &__link {
+    display: inline-block;
+    width: 100%;
+
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 130%;
+
+    text-align: center;
+
+    color: $color-bg;
+
+    padding-bottom: 10px;
+    border-bottom: 1px solid #828282;
+
+    @include hover(color, #efbe65);
+
+    @include active(transform, scale(0.95));
+  }
+}

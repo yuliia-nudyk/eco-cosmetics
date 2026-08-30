@@ -1,0 +1,22 @@
+.product-parameters {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 50px;
+
+  @include on-tablet {
+    flex-direction: row;
+    gap: 30px;
+
+    justify-content: space-between;
+  }
+
+  @include on-desktop {
+    gap: 20px;
+  }
+
+  &__parameter {
+    flex: 1 1 0;
+  }
+}

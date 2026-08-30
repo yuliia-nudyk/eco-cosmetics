@@ -1,0 +1,43 @@
+.payment {
+  overflow-x: hidden;
+
+  background-color: $color-bg;
+
+  &__content {
+    @extend %container;
+
+    @extend .grid;
+    align-content: start;
+  }
+
+  &__top-actions {
+    @extend .grid__item--tablet-1-6;
+    @extend .grid__item--desktop-1-12;
+
+    margin-bottom: 30px;
+  }
+
+  &__payment-selection {
+    @extend .grid__item--tablet-2-5;
+    @extend .grid__item--desktop-4-9;
+
+    margin-bottom: 73px;
+
+    @include on-tablet {
+      margin-bottom: 50px;
+    }
+  }
+
+  &__next-button {
+    @extend .grid__item--tablet-2-5;
+    @extend .grid__item--desktop-4-9;
+
+    margin-bottom: 20px;
+
+    @include on-tablet {
+      width: 280px;
+      margin: 0 auto;
+      margin-bottom: 410px;
+    }
+  }
+}
